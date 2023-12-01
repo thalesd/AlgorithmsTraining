@@ -13,7 +13,8 @@ internal class Program
         BubbleSort,
         SelectionSort,
         InsertionSort,
-        MergeSort
+        MergeSort,
+        BinarySearch
     }
 
     private static void Main(string[] args)
@@ -33,6 +34,8 @@ internal class Program
             Console.WriteLine("8 - Selection Sort");
             Console.WriteLine("9 - Insertion Sort");
             Console.WriteLine("10 - Merge Sort");
+            Console.WriteLine("11 - Binary Search");
+            Console.WriteLine("12 - Breadth First Search");
             Console.WriteLine("");
             Console.WriteLine("Coose the algorithm to be ran [1...N]:");
             algorithmChosen = (ImplementedAlgorithms)int.Parse(Console.ReadLine() ?? "0");
@@ -79,6 +82,9 @@ internal class Program
             case ImplementedAlgorithms.MergeSort:
                 Console.WriteLine("Merge Sort");
                 new MergeSort().Run();
+                break;
+            case ImplementedAlgorithms.BinarySearch:
+                new BinarySearch().Run();
                 break;
             default:
                 break;
